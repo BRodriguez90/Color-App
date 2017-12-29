@@ -182,7 +182,7 @@
                 <div class="col-lg-6 text-center">
                     <div class="screen-thum">
                         <img class="col-lg-12" src="images/balls.svg" alt="loading..." id="loading1" style="display:none;" width="128" height="128">
-                        <img src="http://api.screenshotlayer.com/api/capture?access_key=d25d40f9853f09059b70e9e7fa3bfb82&url=http://facebook.com&viewport=1440x900&width=600&height=400&format=jpg" id="thumbnail" style="display:none;"> <!--Image Thumbnail-->
+                        <!--<img src="http://api.screenshotlayer.com/api/capture?access_key=d25d40f9853f09059b70e9e7fa3bfb82&url=http://facebook.com&viewport=1440x900&width=600&height=400&format=jpg" id="thumbnail" style="display:none;"> --><!--Image Thumbnail-->
                     </div>
                 </div>
                 <div class="col-lg-3">

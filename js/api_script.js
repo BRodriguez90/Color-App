@@ -81,6 +81,7 @@
          $('#swatches').children().remove();
         // screenshot();
          getColors();
+         $('#thumbnail').hide();
          $('#thumbnail').show();
      });
      /*====================Start adding colors to palette======================*/
