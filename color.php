@@ -22,29 +22,7 @@
 
         $select_palettes_result = mysqli_query($connection,$select_palettes_query);
     }
-	/*if((isset($_POST['login'])) && (!isset($_SESSION['logged_in']))) {//if not already logged in and form has been submitted
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		//$password = sha1($password);
-		//$password = mysql_real_escape_string($password);
-		$sql = "SELECT * FROM cb_users WHERE user_name='" . $username . "' AND user_password='".$password."' LIMIT 1"; //See if entered username/pass == username/pass in database
-		if($result = mysqli_query($connection, $sql)){ //Execute the sql query and store result in $result
-           // if(mysqli_num_rows($result) == 1){	
-            while ($row = mysqli_fetch_row($result)){   //$row stores numerical array of data returned from sql query
-              if(mysqli_num_rows($result) == 1){  //if account exists
-                    
-                $_SESSION['logged_in'] = TRUE;
-                $_SESSION['logged_in_user'] = $row[1];
-			
-			//echo "You are now logged in " . $_SESSION['logged_in_user'] . ". You will be redirected to the homepage.";
-                }else{echo "Invalid username and password";}
-	        }
-        }
-    }*/
-	
-	/*if (isset($_SESSION['logged_in'])) {
-		header("Refresh: 3; url=color.php");
-	}*/
+
 ?>
 
 
