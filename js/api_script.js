@@ -74,7 +74,7 @@
              $('#thumbnail').attr("src", source);
              console.log(source);
          });*/
-     }
+    // }
      /*===================Button to pull results==================*/
      $('#url_search').on('click', function (e) {
          e.preventDefault();
