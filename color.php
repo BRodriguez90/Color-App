@@ -1,8 +1,9 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html class="no-js">
 <?php
     error_reporting(E_ALL & ~E_NOTICE);
-	session_start();
+    error_reporting(E_WARNING);
 	include("db_connect.php"); //connect to database
     include("login.php");
    

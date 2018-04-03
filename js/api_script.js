@@ -1,12 +1,12 @@
- var colors_array = [];
+let colors_array = [];
 
  $(function () {
 
-     var cb_array = [];
-     var colorApi = 'https://www.colorfyit.com/api/swatches/list.json?url=';
-     var discoverApi = 'http://www.colorfyit.com/api/discover/list.json?url=';
+     let cb_array = [];
+     const colorApi = 'https://www.colorfyit.com/api/swatches/list.json?url=';
+     const discoverApi = 'http://www.colorfyit.com/api/discover/list.json?url=';
 
-    var loader = 0;
+    let loader = 0;
     function showloader(cnt){
         loader = loader + cnt;
         if(loader < 1 ){
@@ -18,15 +18,13 @@
  
 
      function getColors() {
-         var website = $('#url_text').val();
+         let website = $('#url_text').val();
          console.log(website);
          showloader(1);
          $.getJSON('https://json2jsonp.com/?url=' + encodeURIComponent('https://www.colorfyit.com/api/swatches/list.json?url=' + website + '&discover=true') + '&callback=?',
              function (data, status) {
                  console.log(data);
-                 data.colors.sort(function (a, b) { // sort count descending order
-                     return b.Count - a.Count;
-                 });
+                 data.colors.sort( (a, b) => b.Count - a.Count); // sort count descending order
                  console.log(status);
                  if (data.colors.length == 0) {
                      $('#swatches').append('<p>Couldn\'t retrieve color Hex codes.</p>');
@@ -52,9 +50,7 @@
                          if (i == 15) return false; //limit to 16 results 
                      }); //end each loop
                  } //end if array empty
-             }).done(function(){
-                showloader(-1);
-             }); //end getJSON
+             }).done( ()=> showloader(-1) ); //end getJSON
      } //end getColors() function
 
 
@@ -89,8 +85,8 @@
       /*  if (colors_array.length > 5) {
             colors_array.splice(-1,1);
         }*/
-         var color = $(this).val();
-         var each_palette = 
+         const color = $(this).val();
+         const each_palette = 
                 '<div class="palette" title="Double click to remove" style="background-color:' + color + '; height:217px; width:97px; float:left; border:1px solid #ccc; "' + '>' +
                     '<input type="text" name="hex_code" style="width:100%; padding:0 !important;" value="' + color + '">' +
                 '</div>';
@@ -116,12 +112,12 @@
        
      /*==============Remove colors from palette==================*/
      $(document).on('dblclick', '.palette', function () { // remove colored div on click
-         var x = $(this);
-         var y = x.find('input').val();
+         let x = $(this);
+         let y = x.find('input').val();
          console.log(y);
          x.remove();      // remove the dom element 
 
-         var index = colors_array.indexOf(y);
+         let index = colors_array.indexOf(y);
          if (index > -1) {
              colors_array.splice(index, 1);
              console.log(colors_array);                 //remove the value from the array
@@ -134,13 +130,13 @@
          $('#make_palette_button').attr('disabled');
      };
      /*================== Ajax================*/
-     var make_palette = $('#make_palette_button');
+     let make_palette = $('#make_palette_button');
      make_palette.click(function (e) { // button to create palette
          e.preventDefault();
 
-         var name_palette = $('#name_palette').val();
-         var ea_palette = colors_array.toString();
-         var web_name = $('#url_text').val();
+         let name_palette = $('#name_palette').val();
+         let ea_palette = colors_array.toString();
+         let web_name = $('#url_text').val();
          $.ajax({
              type: 'POST',
              data: {
@@ -172,7 +168,7 @@
       event.preventDefault();
 
       // Store hash
-      var hash = this.hash;
+      let hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
