@@ -2,6 +2,17 @@
 /build/
 */archive/
 
+
+# Ignore file named `login.php`
+login.php
+# Ignore file named `accountcreate.php`
+accountcreate.php
+# Ignore file named `db_connect.php`
+db_connect.php
+# Ignore folder named `Color-Buddy.git`
+Color-Buddy.git
+# Ignore file named `bfg`
+bfg
 __MACOSX
 .DS_Store
 
